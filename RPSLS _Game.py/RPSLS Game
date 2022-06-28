@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-28T15:57:42.127Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="y2JlNUUeR9aeJZxnoMUF" version="20.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-28T17:12:29.436Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="Y4_YVx17DoP1mKnEAyg-" version="20.0.3" type="github">
   <diagram id="TKDgAqgkolk4zazkSOji" name="Page-1">
-    <mxGraphModel dx="1422" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="769" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -47,19 +47,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-10" value="Player" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="225" y="320" width="190" height="130" as="geometry" />
+          <mxGeometry x="225" y="320" width="230" height="130" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-11" value="+ name: str" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-10">
-          <mxGeometry y="26" width="190" height="26" as="geometry" />
+          <mxGeometry y="26" width="230" height="26" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-35" value="+ list_of_gestures: []" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-10">
-          <mxGeometry y="52" width="190" height="26" as="geometry" />
+          <mxGeometry y="52" width="230" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="hvhwsoJthwkLgKMTascJ-12" value="+ chosen_gesture: str" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-10">
-          <mxGeometry y="78" width="190" height="26" as="geometry" />
+        <mxCell id="hvhwsoJthwkLgKMTascJ-12" value="+ chosen_gesture: gestures_list[index]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-10">
+          <mxGeometry y="78" width="230" height="26" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-13" value="+ num_of_wins: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-10">
-          <mxGeometry y="104" width="190" height="26" as="geometry" />
+          <mxGeometry y="104" width="230" height="26" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-57" value="" style="endArrow=none;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" target="hvhwsoJthwkLgKMTascJ-10">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -67,7 +67,7 @@
             <mxPoint x="319.5" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hvhwsoJthwkLgKMTascJ-64" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1">
+        <mxCell id="hvhwsoJthwkLgKMTascJ-64" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1.024;exitY=0.14;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="hvhwsoJthwkLgKMTascJ-12">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="415" y="400" as="sourcePoint" />
             <mxPoint x="490" y="510" as="targetPoint" />
