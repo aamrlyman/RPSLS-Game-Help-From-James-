@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-28T17:24:54.236Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="jxLco9Bekhwl_hPBLr2X" version="20.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-28T17:33:08.329Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="L_iNc-YfuHfNyz-DMon6" version="20.0.3" type="github">
   <diagram id="TKDgAqgkolk4zazkSOji" name="Page-1">
     <mxGraphModel dx="769" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -17,7 +17,7 @@
           <mxGeometry y="100" width="240" height="120" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-26" value="AI(Player)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="80" y="520" width="240" height="104" as="geometry" />
+          <mxGeometry x="80" y="520" width="240" height="78" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-27" value="+ name: Robot" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-26">
           <mxGeometry y="26" width="240" height="26" as="geometry" />
@@ -25,20 +25,14 @@
         <mxCell id="hvhwsoJthwkLgKMTascJ-28" value="+ chosen_gesture: str(random.choice)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-26">
           <mxGeometry y="52" width="240" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="hvhwsoJthwkLgKMTascJ-29" value="+ num_of_wins: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-26">
-          <mxGeometry y="78" width="240" height="26" as="geometry" />
-        </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-31" value="Human(Player)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="360" y="520" width="240" height="104" as="geometry" />
+          <mxGeometry x="360" y="520" width="240" height="78" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-32" value="+ name: input(str)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-31">
           <mxGeometry y="26" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-33" value="+ chosen_gesture: input(list[])" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-31">
           <mxGeometry y="52" width="240" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="hvhwsoJthwkLgKMTascJ-34" value="+ num_of_wins: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="hvhwsoJthwkLgKMTascJ-31">
-          <mxGeometry y="78" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="hvhwsoJthwkLgKMTascJ-47" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;startArrow=none;entryX=0.565;entryY=0.986;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="hvhwsoJthwkLgKMTascJ-10" target="hvhwsoJthwkLgKMTascJ-5">
           <mxGeometry width="160" relative="1" as="geometry">
