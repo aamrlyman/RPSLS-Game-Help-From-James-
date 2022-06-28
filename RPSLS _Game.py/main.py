@@ -10,4 +10,6 @@ from game import Game
 
 game = Game()
 
-game.display_welcome_rules()
+#game.display_welcome_rules()
+
+game.choose_players()

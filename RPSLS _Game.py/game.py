@@ -5,10 +5,8 @@ import time
 
 class Game:
     def __init__(self) -> None:
-        self.human_1 = Human()
-        self.human_2 = Human()
-        self.ai_1 = AI()
-        self.ai_2 = AI()
+        self.player_1 = {}
+        self.player_2 = {}
 
     def run_game():
         pass
@@ -25,6 +23,20 @@ class Game:
         for message in game_rules: 
             time.sleep(1)
             print(message)
+    
+    def choose_players(self):
+        selector = int(input("How many human players?(0, 1, 2): "))
+        if selector == 0:
+            self.player_1 = AI()
+            self.player_2 = AI()
+        elif selector == 1:
+            self.player_1 = Human()
+            self.player_2 = AI()
+        else:
+            self.player_1 = Human()
+            self.player_2 = Human()
+        
+
 
 
 
