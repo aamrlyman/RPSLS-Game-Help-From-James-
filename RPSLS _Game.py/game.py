@@ -21,7 +21,7 @@ class Game:
         print('Welcome to Rock-Paper-Scissors-Lizard-Spok!')
         print('')
         for message in game_rules: 
-            time.sleep(1)
+            time.sleep(.5)
             print(message)
     
     def choose_players(self):
@@ -35,6 +35,20 @@ class Game:
         else:
             self.player_1 = Human()
             self.player_2 = Human()
+
+    def game_phase(self):
+        while self.player_1.num_of_wins < 2 and self.player_2.num_of_wins < 2:
+            self.player_1.chosen_gesture = self.player_1.choose_gesture()
+            self.player_2.chosen_gesture = self.player_2.choose_gesture()
+
+            if self.player_1.chosen_gesture == self.player_2.chosen_gesture:
+                print("Its a tie. Try again!")
+            elif self.player_1.chosen_gesture == 'Rock': 
+                if self.player_2.chosen_gesture == 'Scissors' or self.player_2.chosen_gesture == 'Lizard':
+                    print(f'{self.player_1.name} is the winner!')
+                    self.player_1.num_of_wins += 1
+
+            
         
 
 
