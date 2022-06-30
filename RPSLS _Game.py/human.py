@@ -1,10 +1,10 @@
-from ast import JoinedStr
 from player import Player
 import time
 
 class Human(Player):
     def __init__(self) -> None:
         super().__init__()
+        time.sleep(.5)
         self.name = input("Enter Player one's name: ")
     
     def choose_gesture(self):
@@ -19,8 +19,6 @@ class Human(Player):
                 
             self.chosen_gesture = self.gestures_list[gesture_index]
             time.sleep(.5)
-            print('')
-            print(f'{self.name} chose {self.chosen_gesture}')
             return self.chosen_gesture
 
 

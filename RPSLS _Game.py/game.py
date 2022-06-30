@@ -15,7 +15,7 @@ class Game:
                       'Spock vaporizes Rock']
 
         print('')
-        print('Welcome to Rock-Paper-Scissors-Lizard-Spock!')
+        print('Welcome to Rock-Paper-Scissors-Lizard-Spock!', 'Each match will be best out of three.')
         print('')
         for message in game_rules: 
             time.sleep(.5)
@@ -42,53 +42,45 @@ class Game:
         while self.player_1.num_of_wins < 2 and self.player_2.num_of_wins < 2:
             self.player_1.chosen_gesture = self.player_1.choose_gesture()
             self.player_2.chosen_gesture = self.player_2.choose_gesture()
-
+            print('')
+            print(f'{self.player_1.name} chose {self.player_1.chosen_gesture}.')
+            print(f'{self.player_2.name} chose {self.player_2.chosen_gesture}.')
+            print('')
+            time.sleep(.5)
+            
             if self.player_1.chosen_gesture == self.player_2.chosen_gesture:
-                time.sleep(.5)
                 print("Its a tie. Try again!")
-                print('')
             elif self.player_1.chosen_gesture == 'Rock' and (self.player_2.chosen_gesture == 'Scissors' or self.player_2.chosen_gesture == 'Lizard'):
                     self.player_1.num_of_wins += 1
-                    time.sleep(.5)
                     print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-                    print('')
             elif self.player_1.chosen_gesture == 'Paper' and (self.player_2.chosen_gesture == 'Rock' or self.player_2.chosen_gesture == 'Paper'):
                     self.player_1.num_of_wins += 1
-                    time.sleep(.5)
                     print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-                    print('')
             elif self.player_1.chosen_gesture == 'Scissors' and (self.player_2.chosen_gesture == 'Paper' or self.player_2.chosen_gesture == 'Lizard'):
                     self.player_1.num_of_wins += 1
-                    time.sleep(.5)
                     print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-                    print('')
             elif self.player_1.chosen_gesture == 'Lizard' and (self.player_2.chosen_gesture == 'Spock' or self.player_2.chosen_gesture == 'Paper'):
                     self.player_1.num_of_wins += 1
-                    time.sleep(.5)
                     print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-                    print('')
             elif self.player_1.chosen_gesture == 'Spock' and (self.player_2.chosen_gesture == 'Scissors' or self.player_2.chosen_gesture == 'Rock'):
                     self.player_1.num_of_wins += 1
-                    time.sleep(.5)
                     print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-                    print('')
             else:
                 self.player_2.num_of_wins += 1
-                time.sleep(.5)
                 print(f' That is {self.player_2.num_of_wins} wins for {self.player_2.name}!')
-                print('')
+            print('')
 
     def display_winner(self):
+        print('')
+        time.sleep(.5)
         if self.player_1.num_of_wins > self.player_2.num_of_wins:
-            print('')
-            time.sleep(.5)
-            print(f'{self.player_1.name} won best of out of 3 games! Way to go!')        
+            print(f'{self.player_1.name} is the WINNER! Way to go!!!')        
         else:
-            print('')
-            time.sleep(.5)
-            print(f'{self.player_2.name} won best of out of 3 games! Way to go!')
+            print(f'{self.player_2.name} is the WINNER! Way to go!!!')
             
     def play_again(self): 
+        time.sleep(.5)
+        print('')
         play_again = input('Do you want to play again? y or n:')
         if play_again == 'y':
             self.run_game()
