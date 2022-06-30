@@ -1,4 +1,3 @@
-import imp
 from human import Human 
 from ai import AI
 import time 
@@ -25,13 +24,16 @@ class Game:
     def choose_players(self):
         print('')
         selector = int(input("How many human players?(0, 1, 2): "))
+        while selector < 0 or selector > 2:
+            print('Invalid Entry')
+            selector = int(input("How many human players?(0, 1, 2): "))
         if selector == 0:
             self.player_1 = AI()
             self.player_2 = AI()
         elif selector == 1:
             self.player_1 = Human()
             self.player_2 = AI()
-        else:
+        elif selector == 2:
             self.player_1 = Human()
             self.player_2 = Human()
         print('')
