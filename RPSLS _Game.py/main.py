@@ -10,8 +10,5 @@ from game import Game
 
 game = Game()
 
-game.display_welcome_rules()
-
-game.choose_players()
-game.game_phase()
+game.run_game()
 
