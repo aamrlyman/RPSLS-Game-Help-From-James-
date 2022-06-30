@@ -11,11 +11,11 @@ class Human(Player):
             print('')
             time.sleep(.5)
             print('(0)Rock', '(1)Paper', '(2)Scissors', '(3)Lizard', '(4)Spock')
-            gesture_index = [int(input(f"{self.name}, enter a number between 0 and 4: "))]
+            gesture_index = int(input(f"{self.name}, enter a number between 0 and 4: "))
             valid_indexes_list = [0, 1, 2, 3, 4]
             while valid_indexes_list.count(gesture_index) == 0:
                 print('Invalid entry. Try again.')
-                gesture_index = [int(input(f"{self.name}, enter a number between 0 and 4: "))]
+                gesture_index = int(input(f"{self.name}, enter a number between 0 and 4: "))
                 
             self.chosen_gesture = self.gestures_list[gesture_index]
             time.sleep(.5)
@@ -23,6 +23,5 @@ class Human(Player):
             print(f'{self.name} chose {self.chosen_gesture}')
             return self.chosen_gesture
 
-human = Human()
-human.choose_gesture()
 
+                
