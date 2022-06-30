@@ -71,8 +71,11 @@ class Game:
 
     def display_winner(self):
         if self.player_1.num_of_wins > self.player_2.num_of_wins:
-            print()        
-
+            print('')
+            print(f'{self.player_1.name} won best of out of 3 games! Way to go!')        
+        else:
+            print('')
+            print(f'{self.player_2.name} won best of out of 3 games! Way to go!')
             
         
 
