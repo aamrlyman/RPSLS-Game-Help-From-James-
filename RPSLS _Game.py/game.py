@@ -9,17 +9,14 @@ class Game:
 
     
     def display_welcome_rules(self):
-        game_rules = ['Rock crushes Scissors', 'Scissors cuts Paper', 'Paper covers Rock', 
-                      'Rock crushes Lizard', 'Lizard poisons Spock', 'Spock smashes Scissors', 
-                      'Scissors decapitates Lizard', 'Lizard eats Paper', 'Paper disproves Spock', 
-                      'Spock vaporizes Rock']
-
+        
         print('')
         print('Welcome to Rock-Paper-Scissors-Lizard-Spock!', 'Each match will be best out of three.')
         print('')
-        for message in game_rules: 
-            time.sleep(.5)
-            print(message)
+        for key, value in what_beats_what.items():
+            for loser in value:
+                time.sleep(.5)
+                print(f'{key} {loser[0]} {loser[1]}')
     
     def choose_players(self):
         print('')
@@ -38,6 +35,8 @@ class Game:
             self.player_2 = Human()
         print('')
 
+
+
     def game_phase(self):
         while self.player_1.num_of_wins < 2 and self.player_2.num_of_wins < 2:
             self.player_1.chosen_gesture = self.player_1.choose_gesture()
@@ -48,21 +47,12 @@ class Game:
             print('')
             time.sleep(.5)
             
-            if self.player_1.chosen_gesture == self.player_2.chosen_gesture:
+            gesture_1 = self.player_1.chosen_gesture
+            gesture_2 = self.player_2.chosen_gesture
+
+            if gesture_1 == self.player_2.chosen_gesture:
                 print("Its a tie. Try again!")
-            elif self.player_1.chosen_gesture == 'Rock' and (self.player_2.chosen_gesture == 'Scissors' or self.player_2.chosen_gesture == 'Lizard'):
-                    self.player_1.num_of_wins += 1
-                    print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-            elif self.player_1.chosen_gesture == 'Paper' and (self.player_2.chosen_gesture == 'Rock' or self.player_2.chosen_gesture == 'Paper'):
-                    self.player_1.num_of_wins += 1
-                    print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-            elif self.player_1.chosen_gesture == 'Scissors' and (self.player_2.chosen_gesture == 'Paper' or self.player_2.chosen_gesture == 'Lizard'):
-                    self.player_1.num_of_wins += 1
-                    print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-            elif self.player_1.chosen_gesture == 'Lizard' and (self.player_2.chosen_gesture == 'Spock' or self.player_2.chosen_gesture == 'Paper'):
-                    self.player_1.num_of_wins += 1
-                    print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
-            elif self.player_1.chosen_gesture == 'Spock' and (self.player_2.chosen_gesture == 'Scissors' or self.player_2.chosen_gesture == 'Rock'):
+            elif beats(gesture_1, gesture_2):
                     self.player_1.num_of_wins += 1
                     print(f' That is {self.player_1.num_of_wins} wins for {self.player_1.name}!')
             else:
@@ -73,10 +63,8 @@ class Game:
     def display_winner(self):
         print('')
         time.sleep(.5)
-        if self.player_1.num_of_wins > self.player_2.num_of_wins:
-            print(f'{self.player_1.name} is the WINNER! Way to go!!!')        
-        else:
-            print(f'{self.player_2.name} is the WINNER! Way to go!!!')
+        winner = self.player_1 if self.player_1.num_of_wins > self.player_2.num_of_wins else self.player_2
+        print(f'{winner.name} is the WINNER! Way to go!!!')
             
     def play_again(self): 
         time.sleep(.5)
@@ -98,7 +86,30 @@ class Game:
 
 
 
+what_beats_what = {
+    'Rock': [
+        ('crushes', 'Scissors'),
+        ('crushes', 'Lizard')
+    ],
+    'Scissors': [
+        ('cuts', 'Paper'),
+        ('decapitates', 'Lizard')
+    ],
+    'Paper': [
+        ('covers', 'Rock'),
+        ('disproves', 'Spock')
+    ],
+    'Lizard': [
+        ('poisons', 'Spock'),
+        ('eats', 'Paper')
+    ],
+    'Spock': [
+        ('smashes', 'Scissors'), 
+        ('vaporizes', 'Rock')
+    ]
+}
 
-
-    
-
+def beats(a, b):
+    what_a_beats = what_beats_what[a]
+    b_matches_what_a_beats = map(lambda x: x[1] == b, what_a_beats)
+    return any(b_matches_what_a_beats)
