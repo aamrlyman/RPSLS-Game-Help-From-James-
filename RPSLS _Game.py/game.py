@@ -50,7 +50,7 @@ class Game:
             gesture_1 = self.player_1.chosen_gesture
             gesture_2 = self.player_2.chosen_gesture
 
-            if gesture_1 == self.player_2.chosen_gesture:
+            if gesture_1 == gesture_2:
                 print("Its a tie. Try again!")
             elif beats(gesture_1, gesture_2):
                     self.player_1.num_of_wins += 1
